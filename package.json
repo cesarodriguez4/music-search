@@ -1,0 +1,48 @@
+{
+  "name": "music-search",
+  "version": "1.0.0",
+  "description": "Angular app for search music info through Spotify API",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "compile": "babel --presets es2015 -d lib/ app/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesarodriguez4/music-search.git"
+  },
+  "keywords": [
+    "music-search",
+    "spotify"
+  ],
+  "author": "Cesar Jr Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cesarodriguez4/music-search/issues"
+  },
+  "homepage": "https://github.com/cesarodriguez4/music-search#readme",
+  "dependencies": {
+    "angular": "^1.4.14",
+    "babel-loader": "^6.4.1",
+    "babel-register": "^6.24.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-webpack": "^1.5.0",
+    "mocha": "^3.2.0",
+    "webpack-stream": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.1.0",
+    "css-loader": "^0.27.3",
+    "gulp-connect": "^5.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.5.0",
+    "open": "0.0.5",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.0"
+  }
+}
