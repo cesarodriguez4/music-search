@@ -16,6 +16,11 @@ gulp.task('moveViews', () => {
 	.pipe(gulp.dest("./dist/views"));
 });
 
+gulp.task('moveAssets', () => {
+	return gulp.src("./app/assets/**/*")
+	.pipe(gulp.dest("./dist/assets"));
+});
+
 gulp.task('moveIndex', () => {
 	return gulp.src("./app/index.html")
 	.pipe(gulp.dest("./dist"));
@@ -37,9 +42,9 @@ gulp.task("watchYou", () => {
 	gulp.watch("./app/**/*", ["change"]);
 });
 
-gulp.task("change", ["moveViews", "moveIndex", "build"]);
+gulp.task("change", ["moveViews", "moveAssets","moveIndex", "build"]);
 
-gulp.task("start", ["moveViews", "moveIndex", "build", "watchYou", "start:server", "openInBrowser"]);
+gulp.task("start", ["moveViews", "moveAssets", "moveIndex", "build", "watchYou", "start:server", "openInBrowser"]);
 
 
 
