@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "node app.js",
-    "compile": "babel --presets es2015 -d lib/ app/",
-    "prepublish": "npm run compile"
+    "compile": "babel --presets es2015 -d lib/ app/"
   },
   "repository": {
     "type": "git",
