@@ -2,13 +2,18 @@ import gulp from 'gulp';
 import connect from 'gulp-connect';
 import webpack from 'gulp-webpack';
 import open from 'open';
+import clean from 'gulp-clean';
 
 gulp.task('start:server', () => {
 	connect.server({
   	  root: __dirname + '/dist/',
-      livereload: true,
+      livereload: false,
       port: process.env.PORT || 3000
     });
+});
+
+gulp.task('cleanDist', () => {
+	return gulp.src('./dist', {read: false}).pipe(clean());
 });
 
 gulp.task('moveViews', () => {

@@ -58,15 +58,43 @@
 
 	var _angular2 = _interopRequireDefault(_angular);
 
-	var _main = __webpack_require__(14);
+	var _query = __webpack_require__(14);
+
+	var _query2 = _interopRequireDefault(_query);
+
+	var _main = __webpack_require__(15);
 
 	var _main2 = _interopRequireDefault(_main);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = _angular2.default.module('app', []).controller('main', _main2.default).directive('ngApp', function () {
+	exports.default = _angular2.default.module('app', []).factory('$query', _query2.default).controller('main', ['$query', _main2.default]).directive('ngApp', function () {
 		return {
 			templateUrl: '../views/app.html'
+		};
+	}).directive('ngmain', function () {
+		return {
+			templateUrl: '../views/main.html'
+		};
+	}).directive('ngsearch', function () {
+		return {
+			templateUrl: '../views/search.html'
+		};
+	}).directive('ngresults', function () {
+		return {
+			templateUrl: '../views/results.html'
+		};
+	}).directive('ngempty', function () {
+		return {
+			templateUrl: '../views/empty.html'
+		};
+	}).directive('ngcontent', function () {
+		return {
+			templateUrl: '../views/content.html'
+		};
+	}).directive('ngfooter', function () {
+		return {
+			templateUrl: '../views/footer.html'
 		};
 	});
 
@@ -2635,7 +2663,7 @@
 
 
 	// module
-	exports.push([module.id, ".top {\n  background-color: #c74379;\n  box-shadow: inset 0px 7px 200px 50px rgba(0, 0, 0, 0.16); }\n  .top nav {\n    float: right;\n    font-family: Raleway, arial;\n    color: white;\n    margin-top: 2%; }\n  .top .logo {\n    width: 6%;\n    margin-top: 2%; }\n  .top :nth-child(3) {\n    width: 48%;\n    display: block;\n    margin-left: 25%; }\n  .top :nth-child(4) {\n    width: 3%;\n    margin-left: 47%; }\n\n@media (max-width: 700px) {\n  .top :nth-child(3) {\n    width: 100%;\n    margin-left: 0%;\n    padding: 15%;\n    box-sizing: border-box; }\n  .top :nth-child(4) {\n    width: 15%;\n    margin-left: 42%; }\n  .top .logo {\n    width: 10%; } }\n", ""]);
+	exports.push([module.id, ".top {\n  background-color: #c74379;\n  box-shadow: inset 0px 7px 200px 50px rgba(0, 0, 0, 0.16); }\n  .top nav {\n    float: right;\n    font-family: Raleway, arial;\n    color: white;\n    margin-top: 2%; }\n  .top .logo {\n    width: 6%;\n    margin-top: 2%; }\n  .top :nth-child(3) {\n    width: 48%;\n    display: block;\n    margin-left: 25%; }\n  .top :nth-child(4) {\n    width: 3%;\n    margin-left: 47%; }\n\n@media (max-width: 700px) {\n  .top :nth-child(3) {\n    width: 100%;\n    margin-left: 0%;\n    padding: 15%;\n    box-sizing: border-box; }\n  .top :nth-child(4) {\n    width: 15%;\n    margin-left: 42%; }\n  .top .logo {\n    width: 10%; } }\n\n.searchbar {\n  background-color: #333441;\n  padding: 1%; }\n  .searchbar .wrapper {\n    background-color: white;\n    line-height: 2;\n    width: 44%;\n    padding: 1%;\n    margin-left: 26%;\n    border-radius: 25px;\n    box-shadow: inset 0px 0px 3px black; }\n    .searchbar .wrapper input[type=\"button\"] {\n      float: right;\n      background: #c64278;\n      color: white;\n      border-radius: 50px;\n      line-height: 2;\n      border: none;\n      width: 20%;\n      text-transform: uppercase;\n      outline: none; }\n    .searchbar .wrapper input[type=\"text\"] {\n      border: none;\n      width: 70%;\n      outline: none; }\n\n@media (max-width: 700px) {\n  .searchbar {\n    padding: 1em; }\n    .searchbar .wrapper {\n      width: 100%;\n      margin-left: 0;\n      background: none;\n      box-shadow: none; }\n      .searchbar .wrapper input[type=\"text\"] {\n        background-color: white;\n        line-height: 2;\n        border-radius: 25px;\n        box-shadow: inset 0px 0px 3px black;\n        display: block;\n        width: 80%;\n        padding: 2%;\n        text-align: center;\n        margin-left: 5%; }\n      .searchbar .wrapper input[type=\"button\"] {\n        display: block;\n        width: 50%;\n        padding: 2% 0% 2% 0%;\n        float: none;\n        margin: 2% 0% 0% 20%; } }\n\n.results {\n  background-color: #383a49; }\n  .results div {\n    padding: 5%; }\n  .results img {\n    width: 12%;\n    margin-left: 45%; }\n  .results p {\n    text-align: center;\n    font-size: 1.5em;\n    font-family: raleway, arial;\n    color: #474958; }\n\n@media (max-width: 700px) {\n  .results {\n    display: none; } }\n\nfooter {\n  padding: 1%;\n  background-color: #333441;\n  color: white;\n  font-family: raleway, arial; }\n  footer p {\n    text-align: center; }\n", ""]);
 
 	// exports
 
@@ -36002,15 +36030,43 @@
 /* 14 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
 	exports.default = function () {
+		var result = {};
+		function escape(s) {
+			return s.replace(' ', '%20');
+		}
+		result.query = function (string) {
+			console.log('string', string);
+			var q = escape(string);
+			console.log("https://api.spotify.com/v1/search?q=" + q + "&type=artist,album");
+			return "https://api.spotify.com/v1/search?q=" + q + "&type=artist,album";
+		};
+		return result;
+	};
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	exports.default = function ($query) {
 		var self = this;
-		self.hello = "hello, how're you?";
+		self.q = '';
+		self.sendQuery = function (string) {
+			console.log('Hey');
+			$query.query(string);
+		};
 	};
 
 /***/ }

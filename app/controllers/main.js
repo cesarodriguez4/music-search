@@ -1,4 +1,8 @@
-export default function () {
-	var self = this; 
-	self.hello = "hello, how're you?";
+export default function ($query) {
+	var self = this;
+	self.q = '';
+	self.sendQuery = function(string) {
+		console.log('Hey');
+		$query.query(string);
+	};
 }
