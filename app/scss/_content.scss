@@ -1,0 +1,32 @@
+$bg: #383a49; 
+.content {
+	background-color: $bg;
+	.item {
+		width: 20%;
+	    display: inline-block;
+	    margin: 2%;
+	    background-color: white;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    img {
+			height: 35vh;
+			border-radius: 4px 4px 0px 0px;
+			opacity: 0.9;
+		}
+		img, p {
+			width: 100%;
+		}
+		p {
+			font-size: 20px;
+		    font-family: raleway, arial;
+		    color: #565656;
+		}
+		.album-icon {
+			width: 15%;
+			height: 6vh;
+			float: left;
+    		margin: -20% 4%;
+    		position: relative;
+		}
+	}
+}

@@ -1,12 +1,15 @@
 import './scss/normalize.scss';
 import './scss/app.scss';
+import '../node_modules/ng-dialog/css/ngDialog.css';
+import '../node_modules/ng-dialog/css/ngDialog-theme-default.css';
 import angular from 'angular';
+import ngDialog from 'ng-dialog';
 import query from './factory/query';
 import mainController from './controllers/main';
 
-export default angular.module('app', [])
+export default angular.module('app', ['ngDialog'])
 	.factory('$query', query)
-	.controller('main', ['$query', mainController])
+	.controller('main', ['$query', '$http', 'ngDialog', mainController])
 	.directive('ngApp', () => {
 		return {
 			templateUrl: '../views/app.html'
