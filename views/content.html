@@ -1,1 +1,8 @@
-<p>{{app.q}}</p>
+<div class="content">
+	<a class="item" ng-repeat="album in app.albums | limitTo:6" ng-click="app.modal(album.href);">
+		<img ng-src="{{album.images[0].url}}">
+		<img class="album-icon" ng-src="{{app.albumIcon}}">
+		<p>{{album.name | limitTo: 20}}</p>
+	</a>
+</div>
+
