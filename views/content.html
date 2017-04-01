@@ -2,17 +2,22 @@
 
 <div class="content">
 	<a class="item" ng-repeat="album in app.albums | limitTo: app.shownum" ng-click="app.modalAl(album.href);">
-		<img ng-src="{{album.images[0].url}}">
-		<img class="album-icon" ng-src="{{app.albumIcon}}">
-		<p>{{album.name | limitTo: 25}}</p>
+		<div class="img-cont">
+			<img ng-src="{{album.images[0].url}}">
+			<img class="album-icon" ng-src="{{app.albumIcon}}">
+		</div>
+		<p>{{album.name | limitTo: 23}}</p>
 	</a>
 	<a class="item" ng-repeat="artist in app.artists | limitTo:app.shownum" ng-click="app.modalAr(artist.id, artist.name, artist.images[0].url);">
 		<img ng-src="{{artist.images[0].url}}">
 		<img class="album-icon" ng-src="{{app.artistIcon}}">
-		<p>{{artist.name | limitTo: 25}}</p>
+		<p>{{artist.name | limitTo: 23}}</p>
 	</a>
-	<button ng-if="app.albums" ng-click="app.shownum = app.shownum + 2">SHOW ME MORE!</button>
 </div>
+<div class="show-more" ng-if="app.albums">
+	<button  ng-click="app.shownum = app.shownum + 2">SHOW ME MORE!</button>
+</div>
+
 
 
 
