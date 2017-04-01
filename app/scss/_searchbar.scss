@@ -1,12 +1,12 @@
 $bg: #333441;
 .searchbar {
 	background-color: $bg;
-	padding: 1%;
+	padding: 1.1%;
 	.wrapper {
 		background-color: white;
 		line-height: 2;
 		width: 44%;
-		padding: 1%;
+		padding: 0.4%;
 		margin-left: 26%;
 		border-radius: 25px;
 		box-shadow: inset 0px 0px 3px black;
@@ -45,14 +45,14 @@ $bg: #333441;
 			    width: 80%;
 			    padding: 2%;
 			    text-align: center;
-			    margin-left: 5%;
+			    margin-left: 7%;
 			}
 			input[type="button"] {
 				display: block;
 			    width: 50%;
 			    padding: 2% 0% 2% 0%;
 			    float: none;
-			    margin: 2% 0% 0% 20%;
+			    margin: 2% 0% 0% 24%;
 			}
 		}
 	}

@@ -1,13 +1,18 @@
 $bg: #383a49; 
+body {
+	background-color: $bg;
+}
 .content {
 	background-color: $bg;
+	padding: 3% 0% 0% 10%;
 	.item {
-		width: 20%;
+		width: 19%;
 	    display: inline-block;
-	    margin: 2%;
+	    margin: 0% 0% 4% 2%;
 	    background-color: white;
 	    border-radius: 5px;
 	    cursor: pointer;
+	    overflow: hidden;
 	    img {
 			height: 35vh;
 			border-radius: 4px 4px 0px 0px;
@@ -17,18 +22,24 @@ $bg: #383a49;
 			width: 100%;
 		}
 		p {
-			font-size: 20px;
+			font-size: 18px;
 		    font-family: raleway, arial;
 		    color: #565656;
+		    font-weight: bold;
+		    margin-left: 5%;
 		}
 		.album-icon {
-			width: 15%;
-			height: 6vh;
+			width: 30px;
+			height:30px;
 			float: left;
     		margin: -20% 4%;
     		position: relative;
 		}
 	}
+}
+
+.show-more {
+	background-color: $bg;
 	button {
 		border: 0;
 	    padding: 1%;
@@ -36,6 +47,40 @@ $bg: #383a49;
 	    background-color: #c64278;
 	    color: white;
 	    margin: 2% 0% 5% 44%;
+	    outline: none;
+	}
+}
+
+@media (max-width: 700px) {
+	.content{
+		.item {
+			width: 70%;
+			display: block;
+			margin-left: 10%;
+			img {
+				width: 30%;
+    			height: 90px;
+			}
+			p {
+				display: inline;
+			    margin-top: -20%;
+			    float: left;
+			    margin-left: 35%;
+			}
+		}
+		.img-cont {
+			display: inline;
+		}
+		.album-icon {
+			display: none;
+		}
+	}
+
+	.show-more {
+		button {
+		    padding: 5%;
+		    margin: 2% 0% 5% 28%;
+		}
 	}
 }
 

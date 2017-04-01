@@ -1,9 +1,9 @@
 <div class="album">
 	<img ng-src="{{albumImg}}">
 	<h1>{{albumName}}</h1>
-	<p>Tracks</p>
+	<p class="tracks">Tracks</p>
 	<div  ng-repeat="track in albumTracks">
-		<p>{{track.name}}</p>
-		<span>{{track.duration_ms | date:'mm:ss'}}</span>
+		<span class="title">{{track.name}}</span> <br>
+		<span class="dur">{{track.duration_ms | date:'mm:ss'}}</span>
 	</div>
 </div>
