@@ -9,40 +9,40 @@ import mainController from './controllers/main';
 
 export default angular.module('app', ['ngDialog'])
 	.factory('$query', query)
-	.controller('main', ['$query', '$http', 'ngDialog', mainController])
+	.controller('main', ['$query', '$http', 'ngDialog', '$scope', mainController])
 	.directive('ngApp', () => {
 		return {
-			templateUrl: '../views/app.html'
+			templateUrl: 'views/app.html'
 		}
 	})
 	.directive('ngmain', () => {
 		return {
-			templateUrl: '../views/main.html'
+			templateUrl: 'views/main.html'
 		}
 	})
 	.directive('ngsearch', () => {
 		return {
-			templateUrl: '../views/search.html'
+			templateUrl: 'views/search.html'
 		}
 	})
 	.directive('ngresults', () => {
 		return {
-			templateUrl: '../views/results.html'
+			templateUrl: 'views/results.html'
 		}
 	})
 	.directive('ngempty', () => {
 		return {
-			templateUrl: '../views/empty.html'
+			templateUrl: 'views/empty.html'
 		}
 	})
 	.directive('ngcontent', () => {
 		return {
-			templateUrl: '../views/content.html'
+			templateUrl: 'views/content.html'
 		}
 	})
 	.directive('ngfooter', () => {
 		return {
-			templateUrl: '../views/footer.html'
+			templateUrl: 'views/footer.html'
 		}
 	});
 

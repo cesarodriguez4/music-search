@@ -1,0 +1,15 @@
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+	padding: 0 !important;
+	width: 55% !important;
+	box-shadow: 1px 1px 10px black;
+}
+.album {
+	background-color: white;
+	img {
+		width: 100%;
+		height: 50vh;
+	}
+	h1, p, span {
+		margin-left: 2%;
+	}
+}

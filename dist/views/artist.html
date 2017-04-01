@@ -1,0 +1,12 @@
+<div class="artist">
+	<img ng-src="{{artistImg}}">
+	<h1>{{artistName}}</h1>
+	<p>Albums</p>
+	<div  ng-repeat="album in artistAlbums">
+		<div class="img">
+			<img  ng-src="{{album.images[0].url}}">
+		</div>
+		<p>{{album.name}}</p>
+		<span>{{album.year}}</span>
+	</div>
+</div>
