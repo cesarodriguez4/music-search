@@ -50,3 +50,5 @@ Intall
 ```bash 
 $ npm install
 ```
+# Conclusion
+Perhaps It only took 7 days to deliver the prototype but I can show something of my skills (I think it could make it better, but the time goes against me). However these are a sample of things  I can do. Hope you can understand that I love what I do. I do not intend to give you a perfect code in the first met. Just consider that I can give you results in a remote way, imagine yourself what I do with a team of people with high motivation and creativity.

@@ -1,3 +1,17 @@
+@font-face {
+	font-family: fontBold;
+	src: url(/assets/fonts/raleway/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: fontBase;
+	src: url(/assets/fonts/raleway/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: albumTitle;
+	src: url(/assets/fonts/raleway/Raleway-ThinItalic.ttf);
+}
+
 @import 'top';
 @import 'searchbar';
 @import 'empty';

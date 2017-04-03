@@ -1,7 +1,8 @@
 <ngempty ng-if="!app.albums"></ngempty>
 
-<div class="content">
-	<a class="item" ng-repeat="album in app.albums | limitTo: app.shownum" ng-click="app.modalAl(album.href);">
+<div class="content" ng-if="app.albums">
+	<div class="items">
+		<a class="item" ng-repeat="album in app.albums | limitTo: app.shownum" ng-click="app.modalAl(album.href);">
 		<div class="img-cont">
 			<img ng-src="{{album.images[0].url}}">
 			<img class="album-icon" ng-src="{{app.albumIcon}}">
@@ -13,6 +14,8 @@
 		<img class="album-icon" ng-src="{{app.artistIcon}}">
 		<p>{{artist.name | limitTo: 23}}</p>
 	</a>
+	</div>
+	
 </div>
 <div class="show-more" ng-if="app.albums">
 	<button  ng-click="app.shownum = app.shownum + 2">SHOW ME MORE!</button>

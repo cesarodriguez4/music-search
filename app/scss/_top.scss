@@ -1,6 +1,6 @@
 $bg: #c74379; 
 $shadow: inset 0px 7px 200px 50px rgba(0, 0, 0, 0.16);
-$family: Raleway, arial; 
+$family: fontBase, arial; 
 $topp: 2%;
 .top {
 	background-color: $bg;
@@ -10,10 +10,11 @@ $topp: 2%;
 		font-family: $family;
 		color: white;
 		margin-top: $topp;
+		margin-right: $topp;
 	}
 	.logo {
 		width: 6%;
-		margin-top: $topp;
+		margin:1%;
 	}
 	:nth-child(3) {
 		width: 48%;

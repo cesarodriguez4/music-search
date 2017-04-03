@@ -4,12 +4,14 @@ import '../node_modules/ng-dialog/css/ngDialog.css';
 import '../node_modules/ng-dialog/css/ngDialog-theme-default.css';
 import angular from 'angular';
 import ngDialog from 'ng-dialog';
-import query from './factory/query';
+import query from './services/query';
+import modals from './services/modal';
 import mainController from './controllers/main';
 
 export default angular.module('app', ['ngDialog'])
 	.factory('$query', query)
-	.controller('main', ['$query', '$http', 'ngDialog', '$scope', mainController])
+	.factory('modals', modals)
+	.controller('main', ['$query', '$http', 'ngDialog', '$scope', 'modals', mainController])
 	.directive('ngApp', () => {
 		return {
 			templateUrl: 'views/app.html'

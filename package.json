@@ -4,7 +4,7 @@
   "description": "Angular app for search music info through Spotify API",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js",
+    "test": "karma /tests/angular.spec.js",
     "compile": "babel --presets es2015 -d lib/ app/"
   },
   "repository": {
@@ -23,12 +23,16 @@
   "homepage": "https://github.com/cesarodriguez4/music-search#readme",
   "dependencies": {
     "angular": "^1.4.14",
+    "angular-mocks": "^1.6.4",
     "babel-loader": "^6.4.1",
     "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "gulp-webpack": "^1.5.0",
-    "mocha": "^3.2.0",
+    "jasmine": "^2.5.3",
+    "karma": "^1.5.0",
     "ng-dialog": "^1.0.1",
     "normalize.scss": "^0.1.0",
     "webpack-stream": "^3.2.0"
@@ -44,6 +48,8 @@
     "gulp-connect": "^5.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
     "open": "0.0.5",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.0"

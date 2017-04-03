@@ -70,13 +70,17 @@
 
 	var _query2 = _interopRequireDefault(_query);
 
-	var _main = __webpack_require__(20);
+	var _modal = __webpack_require__(20);
+
+	var _modal2 = _interopRequireDefault(_modal);
+
+	var _main = __webpack_require__(21);
 
 	var _main2 = _interopRequireDefault(_main);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = _angular2.default.module('app', ['ngDialog']).factory('$query', _query2.default).controller('main', ['$query', '$http', 'ngDialog', '$scope', _main2.default]).directive('ngApp', function () {
+	exports.default = _angular2.default.module('app', ['ngDialog']).factory('$query', _query2.default).factory('modals', _modal2.default).controller('main', ['$query', '$http', 'ngDialog', '$scope', 'modals', _main2.default]).directive('ngApp', function () {
 		return {
 			templateUrl: 'views/app.html'
 		};
@@ -2671,7 +2675,7 @@
 
 
 	// module
-	exports.push([module.id, ".top {\n  background-color: #c74379;\n  box-shadow: inset 0px 7px 200px 50px rgba(0, 0, 0, 0.16); }\n  .top nav {\n    float: right;\n    font-family: Raleway, arial;\n    color: white;\n    margin-top: 2%; }\n  .top .logo {\n    width: 6%;\n    margin-top: 2%; }\n  .top :nth-child(3) {\n    width: 48%;\n    display: block;\n    margin-left: 25%; }\n  .top :nth-child(4) {\n    width: 3%;\n    margin-left: 47%; }\n\n@media (max-width: 700px) {\n  .top :nth-child(3) {\n    width: 100%;\n    margin-left: 0%;\n    padding: 15%;\n    box-sizing: border-box; }\n  .top :nth-child(4) {\n    width: 15%;\n    margin-left: 42%; }\n  .top .logo {\n    width: 10%; } }\n\n.searchbar {\n  background-color: #333441;\n  padding: 1.1%; }\n  .searchbar .wrapper {\n    background-color: white;\n    line-height: 2;\n    width: 44%;\n    padding: 0.4%;\n    margin-left: 26%;\n    border-radius: 25px;\n    box-shadow: inset 0px 0px 3px black; }\n    .searchbar .wrapper input[type=\"button\"] {\n      float: right;\n      background: #c64278;\n      color: white;\n      border-radius: 50px;\n      line-height: 2;\n      border: none;\n      width: 20%;\n      text-transform: uppercase;\n      outline: none; }\n    .searchbar .wrapper input[type=\"text\"] {\n      border: none;\n      width: 70%;\n      outline: none; }\n\n@media (max-width: 700px) {\n  .searchbar {\n    padding: 1em; }\n    .searchbar .wrapper {\n      width: 100%;\n      margin-left: 0;\n      background: none;\n      box-shadow: none; }\n      .searchbar .wrapper input[type=\"text\"] {\n        background-color: white;\n        line-height: 2;\n        border-radius: 25px;\n        box-shadow: inset 0px 0px 3px black;\n        display: block;\n        width: 80%;\n        padding: 2%;\n        text-align: center;\n        margin-left: 7%; }\n      .searchbar .wrapper input[type=\"button\"] {\n        display: block;\n        width: 50%;\n        padding: 2% 0% 2% 0%;\n        float: none;\n        margin: 2% 0% 0% 24%; } }\n\n.empty {\n  background-color: #383a49; }\n  .empty div {\n    padding: 5%; }\n  .empty img {\n    width: 12%;\n    margin-left: 45%; }\n  .empty p {\n    text-align: center;\n    font-size: 1.5em;\n    font-family: raleway, arial;\n    color: #474958; }\n\n@media (max-width: 700px) {\n  .empty {\n    display: none; } }\n\nbody {\n  background-color: #383a49; }\n\n.content {\n  background-color: #383a49;\n  padding: 3% 0% 0% 10%; }\n  .content .item {\n    width: 19%;\n    display: inline-block;\n    margin: 0% 0% 4% 2%;\n    background-color: white;\n    border-radius: 5px;\n    cursor: pointer;\n    overflow: hidden; }\n    .content .item img {\n      height: 35vh;\n      border-radius: 4px 4px 0px 0px;\n      opacity: 0.9; }\n    .content .item img, .content .item p {\n      width: 100%; }\n    .content .item p {\n      font-size: 18px;\n      font-family: raleway, arial;\n      color: #565656;\n      font-weight: bold;\n      margin-left: 5%; }\n    .content .item .album-icon {\n      width: 30px;\n      height: 30px;\n      float: left;\n      margin: -20% 4%;\n      position: relative; }\n\n.show-more {\n  background-color: #383a49; }\n  .show-more button {\n    border: 0;\n    padding: 1%;\n    border-radius: 20px;\n    background-color: #c64278;\n    color: white;\n    margin: 2% 0% 5% 44%;\n    outline: none; }\n\n@media (max-width: 700px) {\n  .content .item {\n    width: 70%;\n    display: block;\n    margin-left: 10%; }\n    .content .item img {\n      width: 30%;\n      height: 90px; }\n    .content .item p {\n      display: inline;\n      margin-top: -20%;\n      float: left;\n      margin-left: 35%; }\n  .content .img-cont {\n    display: inline; }\n  .content .album-icon {\n    display: none; }\n  .show-more button {\n    padding: 5%;\n    margin: 2% 0% 5% 28%; } }\n\nfooter {\n  padding: 1%;\n  background-color: #333441;\n  color: white;\n  font-family: raleway, arial; }\n  footer p {\n    text-align: center; }\n\n.ngdialog.ngdialog-theme-default .ngdialog-content {\n  padding: 0 !important;\n  width: 55% !important;\n  box-shadow: 1px 1px 10px black; }\n\n.album {\n  background-color: white; }\n  .album img {\n    width: 100%;\n    height: 400px; }\n  .album h1, .album p, .album span {\n    margin-left: 4%; }\n  .album h1 {\n    float: left;\n    color: white;\n    position: relative;\n    text-shadow: 1px 1px 1px black;\n    margin-top: -10%; }\n  .album .tracks {\n    font-weight: bold;\n    border-bottom: 1px solid whitesmoke;\n    width: 95%; }\n  .album .title {\n    font-size: x-large;\n    font-weight: bold; }\n  .album .dur {\n    font-family: Raleway;\n    font-size: 15px;\n    color: grey; }\n  .album div {\n    margin-bottom: 2%; }\n\n@media (max-width: 700px) {\n  .ngdialog.ngdialog-theme-default .ngdialog-content {\n    width: 95% !important; } }\n\n.artist {\n  background-color: white; }\n  .artist img {\n    width: 100%;\n    height: 50vh; }\n  .artist .img {\n    width: 10%;\n    float: left; }\n    .artist .img img {\n      width: 100%;\n      height: 10vh; }\n  .artist h1, .artist p, .artist span {\n    margin-left: 2%; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: fontBold;\n  src: url(/assets/fonts/raleway/Raleway-SemiBold.ttf); }\n\n@font-face {\n  font-family: fontBase;\n  src: url(/assets/fonts/raleway/Raleway-Regular.ttf); }\n\n@font-face {\n  font-family: albumTitle;\n  src: url(/assets/fonts/raleway/Raleway-ThinItalic.ttf); }\n\n.top {\n  background-color: #c74379;\n  box-shadow: inset 0px 7px 200px 50px rgba(0, 0, 0, 0.16); }\n  .top nav {\n    float: right;\n    font-family: fontBase, arial;\n    color: white;\n    margin-top: 2%;\n    margin-right: 2%; }\n  .top .logo {\n    width: 6%;\n    margin: 1%; }\n  .top :nth-child(3) {\n    width: 48%;\n    display: block;\n    margin-left: 25%; }\n  .top :nth-child(4) {\n    width: 3%;\n    margin-left: 47%; }\n\n@media (max-width: 700px) {\n  .top :nth-child(3) {\n    width: 100%;\n    margin-left: 0%;\n    padding: 15%;\n    box-sizing: border-box; }\n  .top :nth-child(4) {\n    width: 15%;\n    margin-left: 42%; }\n  .top .logo {\n    width: 10%; } }\n\n.searchbar {\n  background-color: #333441;\n  padding: 1.1%; }\n  .searchbar .wrapper {\n    background-color: white;\n    line-height: 2;\n    width: 44%;\n    padding: 0.4%;\n    margin-left: 26%;\n    border-radius: 25px;\n    box-shadow: inset 0px 0px 3px black; }\n    .searchbar .wrapper input[type=\"button\"] {\n      float: right;\n      background: #c64278;\n      color: white;\n      border-radius: 50px;\n      line-height: 2;\n      border: none;\n      width: 20%;\n      text-transform: uppercase;\n      outline: none; }\n    .searchbar .wrapper input[type=\"text\"] {\n      border: none;\n      width: 70%;\n      outline: none; }\n\n@media (max-width: 700px) {\n  .searchbar {\n    padding: 1em; }\n    .searchbar .wrapper {\n      width: 100%;\n      margin-left: 0;\n      background: none;\n      box-shadow: none; }\n      .searchbar .wrapper input[type=\"text\"] {\n        background-color: white;\n        line-height: 2;\n        border-radius: 25px;\n        box-shadow: inset 0px 0px 3px black;\n        display: block;\n        width: 80%;\n        padding: 2%;\n        text-align: center;\n        margin-left: 7%; }\n      .searchbar .wrapper input[type=\"button\"] {\n        display: block;\n        width: 50%;\n        padding: 2% 0% 2% 0%;\n        float: none;\n        margin: 2% 0% 0% 24%; } }\n\n.empty {\n  background-color: #383a49; }\n  .empty div {\n    padding: 5%; }\n  .empty img {\n    width: 12%;\n    margin-left: 45%; }\n  .empty p {\n    text-align: center;\n    font-size: 1.5em;\n    font-family: raleway, arial;\n    color: #474958; }\n\n@media (max-width: 700px) {\n  .empty {\n    display: none; } }\n\nbody {\n  background-color: #383a49; }\n\n.content {\n  background-color: #383a49; }\n  .content .items {\n    margin-left: 6%;\n    margin-top: 4%; }\n  .content .item {\n    width: 20%;\n    display: inline-block;\n    margin: 0% 0% 4% 2%;\n    background-color: white;\n    border-radius: 2px;\n    cursor: pointer;\n    overflow: hidden; }\n    .content .item img {\n      height: 250px;\n      border-radius: 1px 1px 0px 0px;\n      opacity: 0.9; }\n    .content .item img, .content .item p {\n      width: 100%; }\n    .content .item p {\n      font-size: 18px;\n      font-family: raleway, arial;\n      color: #565656;\n      font-weight: bold;\n      margin-left: 5%; }\n    .content .item .album-icon {\n      width: 30px;\n      height: 30px;\n      float: left;\n      margin: -20% 4%;\n      position: relative; }\n\n.show-more {\n  background-color: #383a49; }\n  .show-more button {\n    border: 0;\n    padding: 1%;\n    border-radius: 20px;\n    background-color: #c64278;\n    color: white;\n    margin: 2% 0% 5% 44%;\n    outline: none; }\n\n@media (max-width: 700px) {\n  .content .item {\n    width: 70%;\n    display: block;\n    margin-left: 10%;\n    border-radius: 20px; }\n    .content .item img {\n      width: 30%;\n      height: 90px; }\n    .content .item p {\n      display: inline;\n      margin-top: -20%;\n      float: left;\n      margin-left: 35%; }\n  .content .img-cont {\n    display: inline; }\n  .content .album-icon {\n    display: none; }\n  .show-more button {\n    padding: 5%;\n    margin: 2% 0% 5% 28%; } }\n\nfooter {\n  padding: 1%;\n  background-color: #333441;\n  color: white;\n  font-family: albumTitle, Raleway, arial; }\n  footer p {\n    text-align: center; }\n\n.ngdialog.ngdialog-theme-default .ngdialog-content {\n  padding: 0 !important;\n  width: 50% !important;\n  box-shadow: 1px 1px 5px black; }\n\n.album {\n  background-color: white; }\n  .album .area img {\n    width: 100%;\n    height: 400px; }\n  .album .area h1 {\n    float: left;\n    color: white;\n    position: relative;\n    text-shadow: 1px 1px 1px black;\n    margin-top: -10%;\n    font-family: Raleway, arial;\n    letter-spacing: 1px; }\n  .album h1, .album p, .album span {\n    margin-left: 4%; }\n  .album .tracks {\n    font-weight: bold;\n    border-bottom: 1px solid whitesmoke;\n    width: 95%;\n    font-family: fontBold, Raleway, arial; }\n  .album .title {\n    font-size: larger;\n    font-weight: bold;\n    font-family: fontBase; }\n  .album .dur {\n    font-family: Raleway;\n    font-size: 15px;\n    color: grey; }\n  .album div {\n    margin-bottom: 2%; }\n\n@media (max-width: 700px) {\n  .ngdialog.ngdialog-theme-default .ngdialog-content {\n    width: 95% !important; }\n  .album .title, .artist .title {\n    font-size: normal; }\n  .album .img-cont p, .artist .img-cont p {\n    display: block;\n    float: none;\n    width: 100%; } }\n\n.artist {\n  background-color: white; }\n  .artist img {\n    width: 100%;\n    height: 500px; }\n  .artist .img-cont {\n    display: inline; }\n    .artist .img-cont img {\n      width: 100px;\n      height: 100px;\n      display: inline;\n      margin-left: 2%; }\n    .artist .img-cont p {\n      display: inline;\n      font-family: fontBase, Raleway, arial;\n      font-weight: bold; }\n  .artist h1 {\n    float: left;\n    color: white;\n    position: relative;\n    text-shadow: 1px 1px 1px black;\n    margin-top: -10%;\n    font-family: albumTitle, Raleway, arial;\n    letter-spacing: 1px; }\n  .artist .tracks {\n    font-weight: bold;\n    border-bottom: 1px solid whitesmoke;\n    width: 95%;\n    font-family: fontBold, Raleway, arial; }\n  .artist h1, .artist p, .artist span {\n    margin-left: 2%; }\n", ""]);
 
 	// exports
 
@@ -37054,7 +37058,45 @@
 		value: true
 	});
 
-	exports.default = function ($query, $http, ngDialog, $scope) {
+	exports.default = function () {
+		return {
+			album: function album(href, $http, $scope, ngDialog, modals) {
+				$http({ method: 'GET', url: href }).then(function (response) {
+					var album = response.data;
+					$scope.albumName = album.name;
+					$scope.albumImg = album.images[0].url;
+					$scope.albumTracks = album.tracks.items;
+				});
+				ngDialog.open({ template: '../views/album.html',
+					className: 'ngdialog-theme-default',
+					scope: $scope });
+			},
+			artist: function artist(id, artistName, img, $http, $scope, ngDialog, modals) {
+				var href = 'https://api.spotify.com/v1/artists/' + id + '/albums';
+				$http({ method: 'GET', url: href }).then(function (response) {
+					var artist = response.data;
+					$scope.artistName = artistName;
+					$scope.artistImg = img;
+					$scope.artistAlbums = artist.items;
+				});
+				ngDialog.open({ template: '../views/artist.html',
+					className: 'ngdialog-theme-default',
+					scope: $scope });
+			}
+		};
+	};
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	exports.default = function ($query, $http, ngDialog, $scope, modals) {
 		var self = this;
 		self.squares = '';
 		self.albums = '';
@@ -37080,31 +37122,13 @@
 				self.squares = 'Sorry, something went wrong x(';
 			});
 		};
+
 		self.modalAl = function (href) {
-			$http({ method: 'GET', url: href }).then(function (response) {
-				console.log(response);
-				var album = response.data;
-				$scope.albumName = album.name;
-				$scope.albumImg = album.images[0].url;
-				$scope.albumTracks = album.tracks.items;
-			});
-			ngDialog.open({ template: '../views/album.html',
-				className: 'ngdialog-theme-default',
-				scope: $scope });
+			modals.album(href, $http, $scope, ngDialog, modals);
 		};
+
 		self.modalAr = function (id, artistName, img) {
-			var href = 'https://api.spotify.com/v1/artists/' + id + '/albums';
-			console.log(href);
-			$http({ method: 'GET', url: href }).then(function (response) {
-				console.log(response);
-				var artist = response.data;
-				$scope.artistName = artistName;
-				$scope.artistImg = img;
-				$scope.artistAlbums = artist.items;
-			});
-			ngDialog.open({ template: '../views/artist.html',
-				className: 'ngdialog-theme-default',
-				scope: $scope });
+			modals.artist(id, artistName, img, $http, $scope, ngDialog, modals);
 		};
 	};
 

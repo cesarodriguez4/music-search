@@ -12,11 +12,9 @@
             test: /\.css$/,
             loaders: [ 'style', 'css']
          },
-         {
-          test: /\.(eot|svg|ttf|woff|woff2)$/,
-          loader: 'file?name=public/fonts/[name].[ext]'
-         },   
-         {
+         {test: /.(ico|png|jpg|gif|svg|eot|ttf|woff|woff2)(\?.+)?$/, 
+            loaders: [ 'style', 'css', 'sass' ]}   
+         ,{
 	        test: /\.scss$/,
 	        loaders: [ 'style', 'css', 'sass' ]
          }]

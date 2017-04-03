@@ -1,7 +1,9 @@
 <div class="album">
-	<img ng-src="{{albumImg}}">
-	<h1>{{albumName}}</h1>
-	<p class="tracks">Tracks</p>
+	<div class="area" >
+		<img ng-src="{{albumImg}}">
+		<h1>{{albumName}}</h1>
+		<p class="tracks">Tracks</p>
+	</div>
 	<div  ng-repeat="track in albumTracks">
 		<span class="title">{{track.name}}</span> <br>
 		<span class="dur">{{track.duration_ms | date:'mm:ss'}}</span>
